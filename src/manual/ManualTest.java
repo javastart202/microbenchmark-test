@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class ManualTest {
+
+       public static final Employee EMPLOYEE_TO_BE_FOUND = new Employee("730815", "Jules", "Barmore", 177431);
+
        public static void main(String[] args) throws FileNotFoundException {
 
               ManualExecution.repeatExecute(ManualTest::testEmployeeSimpleSearch, 5);
@@ -31,7 +34,7 @@ public class ManualTest {
 
 
               Employee employee = EmployeeStats
-                  .binarySearch(employees, new Employee("120306", "Dudley", "Coffin", 60136));
+                  .binarySearch(employees, EMPLOYEE_TO_BE_FOUND);
               System.out.println("Found : {} " + employee);
               return employee;
        }
@@ -48,7 +51,7 @@ public class ManualTest {
               System.out.println("size = " + employees.size());
 
               Employee employee = EmployeeStats
-                  .simpleSearch(employees, new Employee("120306", "Dudley", "Coffin", 60136));
+                  .simpleSearch(employees, new Employee("730815", "Jules", "Barmore", 177431));
 
               System.out.println("Found : {} " + employee);
        }
