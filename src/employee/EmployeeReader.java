@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class EmployeeReader {
 
-       protected static final String EMPLOYEES_1M = "employees500000.csv";
+       protected static final String EMPLOYEES_1M = "employees100000.csv";
 
        public static List<Employee> readEmployeesScanner() throws FileNotFoundException {
               File file = new File(EMPLOYEES_1M);
@@ -24,7 +24,7 @@ public class EmployeeReader {
        }
 
        public static List<Employee> readEmployeesBufferReader() throws IOException {
-              String fileName = "employees500000.csv";
+              String fileName = "employees100000.csv";
               try (
                       var fileReader = new FileReader(fileName);
                       var reader = new BufferedReader(fileReader);

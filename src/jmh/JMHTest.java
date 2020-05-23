@@ -19,12 +19,12 @@ public class JMHTest {
               // Do nothing
        }
 
-//       @Benchmark
-//       @Fork(value = 1, warmups = 1)
-//       @Measurement(time = 1, timeUnit = TimeUnit.SECONDS, iterations = 5)
-//       @Warmup(iterations = 2)
-//       @BenchmarkMode(Mode.AverageTime)
-//       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       @Benchmark
+       @Fork(value = 1, warmups = 1)
+       @Measurement(time = 1, timeUnit = TimeUnit.SECONDS, iterations = 5)
+       @Warmup(iterations = 2)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
        public static List<Employee> testScannerEmployeeRead() {
               List<Employee> employees = new ArrayList<>();
               try {
@@ -36,12 +36,12 @@ public class JMHTest {
 
        }
 
-//       @Benchmark
-//       @Fork(value = 1, warmups = 1)
-//       @Measurement(time = 1, timeUnit = TimeUnit.SECONDS, iterations = 5)
-//       @Warmup(iterations = 2)
-//       @BenchmarkMode(Mode.AverageTime)
-//       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+       @Benchmark
+       @Fork(value = 1, warmups = 1)
+       @Measurement(time = 1, timeUnit = TimeUnit.SECONDS, iterations = 5)
+       @Warmup(iterations = 2)
+       @BenchmarkMode(Mode.AverageTime)
+       @OutputTimeUnit(TimeUnit.MILLISECONDS)
        public static  List<Employee> testBufferedReaderEmployeeRead(Blackhole bh) {
               List<Employee> employees = new ArrayList<>();
               try {

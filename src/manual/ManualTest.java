@@ -19,12 +19,7 @@ public class ManualTest {
 
        }
 
-       @Benchmark
-       @Fork(value = 1, warmups = 1)
-       @Measurement(time = 1, timeUnit = TimeUnit.SECONDS, iterations = 5)
-       @Warmup(iterations = 2)
-       @BenchmarkMode(Mode.AverageTime)
-       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+
        public static Employee testEmployeeSortAndBinarySearch() {
               List<Employee> employees = null;
               try {
@@ -41,12 +36,7 @@ public class ManualTest {
               return employee;
        }
 
-       @Benchmark
-       @Fork(value = 1, warmups = 1)
-       @Measurement(time = 1, timeUnit = TimeUnit.SECONDS, iterations = 5)
-       @Warmup(iterations = 2)
-       @BenchmarkMode(Mode.AverageTime)
-       @OutputTimeUnit(TimeUnit.MILLISECONDS)
+
        public static void testEmployeeSimpleSearch() {
               List<Employee> employees = null;
               try {
